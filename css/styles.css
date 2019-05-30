@@ -8,7 +8,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
   text-align: center;
 }
 
@@ -21,6 +21,56 @@ img {
   width: 95%;
   max-width: 70em;
   margin: 0 auto;
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* COLUMN SYSTEM ===================== */
+
+[class^=col-] {
+  width: 100;
+  margin-top: 1em;
+}
+
+[class^=col-]:first-child {
+  margin-top: 0;
+}
+
+.col-1 {
+  width: 33.3333%;
+  float: left;
+}
+
+
+
+@media (min-width: 40rem) {
+
+  [class^=col-] {
+    float: left;
+    padding: 0 .5em;
+    margin-top: 0;
+  }
+
+  [class^=col-]:first-child {
+    padding-left: 0;
+  }
+  [class^=col-]:last-child {
+    padding-right: 0;
+  }
+
+  .col-3 {
+    width: 50%;
+  }
+
+  .col-1 {
+    width: 16.6666%;
+  }
 }
 
 /* TYPOGRAPHY ===================== */
@@ -52,6 +102,17 @@ p: last-of-type {
   display: block;
   font-size: .9em;
 
+}
+
+.title-cta {
+  margin: 0 0 .5em;
+  color: white;
+}
+
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 @media (min-width: 60rem ) {
@@ -92,14 +153,33 @@ p: last-of-type {
 
 
 .button-accent {
-  color: #00ff6c;
-  border-color: #00ff6c;
+  color: #FFF;
+  border-color: #00BFFF;
+  background-color: rgba(0, 75, 100, .3);
 }
 
 .button-accent:hover,
 .button-accent:focus {
-  background: #00ff6c;
-  color: #232323;
+  background: #00BFFF;
+  color: #FFF;
+}
+
+.button-dark {
+  color: #FFF;
+  border-color: #FFF;
+}
+
+.button-dark:hover,
+.button-dark:focus {
+  background: #FFF;
+  color: #00BFFF;
+}
+
+/* PARALLAX ===================== */
+
+.parallax--bg,
+.parallax--box {
+  transition: initial;
 }
 
 
@@ -153,12 +233,15 @@ nav a:focus {
 /* HOME-HERO ===================== */
 
 .home-hero {
-  background-image: url(../img/hero-bg.jpg);
+  background-image: url(../img/hero-bg2.jpg);
   background-size: cover;
   background-position: center;
   padding: 10em 0;
   color: #FFF;
 }
+
+
+
 
 @media (min-width: 60rem){
   .home-hero {
@@ -175,14 +258,14 @@ nav a:focus {
   padding: 4em;
   width: 100vw;
   margin-left: -2.5%;
-  outline: 2px solid #00ff6c;
+  outline: 2px solid #00BFFF;
   outline-offset: -2.5em;
   color: #FFF;
   position: relative;
 }
 
 .home-about-textbox h1 {
-  color: #00ff6c;
+  color: #00BFFF;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -208,7 +291,7 @@ nav a:focus {
   }
 
   .home-about {
-    background-image: url(../img/who-we-are.jpg);
+    background-image: url(../img/who-i-am.jpg);
     background-repeat: no-repeat;
     padding-bottom: 10em;
   }
@@ -219,7 +302,7 @@ nav a:focus {
     outline-offset: -3.75em;
     margin-left: -2.5%;
     top: -5em;
-    text-align: left;
+    text-align: center;
     box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
   }
 
@@ -236,7 +319,7 @@ nav a:focus {
 
 
 .portfolio {
-  margin: 3em 0;
+  margin: 3em 0 0;
 }
 
 .port-item {
@@ -297,4 +380,20 @@ nav a:focus {
   .port-item:hover .port-desc{
     transform: translateY(0%);
   }
+}
+
+
+/* CALL TO ACTION ===================== */
+.cta {
+  background-color: #0000CD;
+  padding: 6em 0;
+}
+
+/* FOOTER ===================== */
+
+footer {
+  background: #232323;
+  color: #fff;
+  text-align: left;
+  padding: 5em 0;
 }
