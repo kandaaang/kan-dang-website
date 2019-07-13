@@ -129,6 +129,13 @@ p: last-of-type {
   .title {
     font-size: 3.7rem;
   }
+
+  .about-text {
+    float: left;
+    margin-left: 6em;
+    margin-right: 35em;
+  }
+
 }
 
 /* BUTTONS ===================== */
@@ -246,6 +253,16 @@ nav a:focus {
   color: #FFF;
 }
 
+/* ABOUT-HERO ===================== */
+
+.about-hero {
+  background-image: url(../img/background-beverage-brown.jpg);
+  background-size: cover;
+  background-position: fixed;
+  padding: 10em 0;
+  color: #FFF;
+
+}
 
 
 
@@ -256,6 +273,7 @@ nav a:focus {
   }
 }
 
+}
 
 /* HOME-ABOUT ===================== */
 
