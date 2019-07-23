@@ -108,6 +108,13 @@ p: last-of-type {
 
 }
 
+
+.about-text {
+  float: left;
+  margin-left: 6em;
+  margin-right: 30em;
+}
+
 .title-cta {
   margin: 0 0 .5em;
   color: white;
@@ -129,13 +136,6 @@ p: last-of-type {
   .title {
     font-size: 3.7rem;
   }
-
-  .about-text {
-    float: left;
-    margin-left: 6em;
-    margin-right: 35em;
-  }
-
 }
 
 /* BUTTONS ===================== */
@@ -273,7 +273,6 @@ nav a:focus {
   }
 }
 
-}
 
 /* HOME-ABOUT ===================== */
 
