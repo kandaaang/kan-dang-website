@@ -110,9 +110,8 @@ p: last-of-type {
 
 
 .about-text {
-  float: left;
-  margin-left: 6em;
-  margin-right: 30em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .title-cta {
@@ -126,15 +125,10 @@ p: last-of-type {
   list-style-type: none;
 }
 
-@media (min-width: 60rem ) {
-
-  p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-
-  .title {
-    font-size: 3.7rem;
+@media (min-width: 60rem) {
+  .about-text {
+    margin-left: 10em;
+    margin-right: 10em;
   }
 }
 
@@ -424,5 +418,5 @@ footer {
   color: #fff;
   text-align: left;
   padding: 5em 0;
-  
+
 }
